@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "./base.css";
 import introImg from "./assets/1.jpg";
 import runes from "runes";
-import { animated, useSpring, useTrail } from "react-spring";
-
+import { animated, useTrail } from "react-spring";
 
 function App() {
   const [toggle, set] = useState(true);
-  const letters = runes("hello there");
+  const letters = runes("Привет всем");
   const config = { mass: 5, tension: 2000, friction: 150 };
 
   const trail = useTrail(letters.length, {
